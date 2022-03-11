@@ -23,7 +23,7 @@ public class EventDTO implements Serializable {
 		this.date = date;
 		this.url = url;
 		this.cityId = cityId;
-	}
+	} 
 	
 	public EventDTO(Event entity) {
 		id = entity.getId();

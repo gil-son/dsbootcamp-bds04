@@ -27,7 +27,7 @@ public class Event {
 	
 	public Event() {
 	}
-
+ 
 	public Event(Long id, String name, LocalDate date, String url, City city) {
 		this.id = id;
 		this.name = name;

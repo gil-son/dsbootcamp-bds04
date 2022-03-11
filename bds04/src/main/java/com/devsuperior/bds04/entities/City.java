@@ -27,7 +27,7 @@ public class City {
 
 	public City(Long id, String name) {
 		this.id = id;
-		this.name = name;
+		this.name = name; 
 	}
 
 	public Long getId() {
