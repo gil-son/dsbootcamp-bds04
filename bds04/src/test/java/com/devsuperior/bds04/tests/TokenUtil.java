@@ -1,6 +1,6 @@
 package com.devsuperior.bds04.tests;
 
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
+//import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -16,6 +16,7 @@ import org.springframework.util.MultiValueMap;
 @Component
 public class TokenUtil {
 
+	/*
 	@Value("${security.oauth2.client.client-id}")
 	private String clientId;
 
@@ -43,4 +44,5 @@ public class TokenUtil {
 		JacksonJsonParser jsonParser = new JacksonJsonParser();
 		return jsonParser.parseMap(resultString).get("access_token").toString();
 	}
+	*/
 }
