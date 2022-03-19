@@ -1,4 +1,4 @@
-package com.devsuperior.bds04.config;
+package com.devsuperior.bds03.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,8 +15,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	
-	
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	
@@ -30,21 +28,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/actuator/**"); // pass on actuator (library from Spring OAuth) and ignore any endpoint
+		web.ignoring().antMatchers("/actuator/**");
 	}
 
-	@Override // it is explicit, because, it will turn AuthenticationManager a Bean (Component) in system
+	@Override
 	@Bean
 	protected AuthenticationManager authenticationManager() throws Exception {
 		return super.authenticationManager();
 	}
-	
-	
-	
-	/*
-		@Override
-		public void configure(WebSecurity web) throws Exception {
-			web.ignoring().antMatchers("/**"); // ignore any endpoint
-		}
-	 */
 }
