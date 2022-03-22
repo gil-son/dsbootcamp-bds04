@@ -185,5 +185,4 @@ public class EventControllerIT {
 		result.andExpect(status().isOk());
 		result.andExpect(jsonPath("$.content").exists());
 	}	
-
 }

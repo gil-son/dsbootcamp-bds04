@@ -4,14 +4,10 @@ import java.io.Serializable;
 
 import com.devsuperior.bds04.entities.City;
 
-import javax.validation.constraints.NotBlank;
-
 public class CityDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
-
-	@NotBlank(message = "The name is required")
 	private String name;
 	
 	public CityDTO() {
