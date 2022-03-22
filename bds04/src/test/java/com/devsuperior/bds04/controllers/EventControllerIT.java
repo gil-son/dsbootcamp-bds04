@@ -25,7 +25,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @AutoConfigureMockMvc
 @Transactional
 public class EventControllerIT {
-	/*
+
 	@Autowired
 	private MockMvc mockMvc;
 	
@@ -185,5 +185,5 @@ public class EventControllerIT {
 		result.andExpect(status().isOk());
 		result.andExpect(jsonPath("$.content").exists());
 	}	
-	*/
+
 }
