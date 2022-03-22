@@ -24,7 +24,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Transactional
 public class CityControllerIT {
 
-	/*
+
 	@Autowired
 	private MockMvc mockMvc;
 	
@@ -133,5 +133,5 @@ public class CityControllerIT {
 		result.andExpect(jsonPath("$[1].name").value("Belém"));
 		result.andExpect(jsonPath("$[2].name").value("Brasília"));
 	}
-	*/
+
 }
