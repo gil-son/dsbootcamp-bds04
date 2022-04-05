@@ -1,7 +1,7 @@
 package com.devsuperior.bds04.resources;
 
-import com.devsuperior.bds04.dto.CityDTO;
-import com.devsuperior.bds04.services.CityService;
+import com.devsuperior.bds04.dto.EventDTO;
+import com.devsuperior.bds04.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,22 +14,22 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/cities")
-public class CityResource {
+public class EventResource {
 
     @Autowired
-    CityService service;
+    EventService service;
 
     // PAGED
     @GetMapping("/paged")
-    public ResponseEntity<Page<CityDTO>> findAllPaged(Pageable pageable){
-        Page<CityDTO> getPage = service.findAllPaged(pageable);
+    public ResponseEntity<Page<EventDTO>> findAllPaged(Pageable pageable){
+        Page<EventDTO> getPage = service.findAllPaged(pageable);
         return ResponseEntity.ok().body(getPage);
     }
 
     // LIST
     @GetMapping
-    public ResponseEntity<List<CityDTO>> findAllList(){
-        List<CityDTO> getList = service.findAllList();
+    public ResponseEntity<List<EventDTO>> findAllList(){
+        List<EventDTO> getList = service.findAllList();
         return ResponseEntity.ok().body(getList);
     }
 

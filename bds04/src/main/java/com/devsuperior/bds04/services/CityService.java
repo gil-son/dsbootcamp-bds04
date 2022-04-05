@@ -9,13 +9,24 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class CityService {
 
     @Autowired
     private CityRepository repository;
 
+    // LIST
+    public List<CityDTO> findAllList(){
+        List<City> CityList = repository.findAll();
+        //for(City c : CityList){dto.add(new CityDTO(c));}
+        return CityList.stream().map( x -> new CityDTO(x)).collect(Collectors.toList());
+    }
 
+    // PAGED
     @Transactional(readOnly = true)
     public Page<CityDTO> findAllPaged(Pageable pageable){ // PageRequest pageRequest
         Page<City> page = repository.findAll(pageable);
