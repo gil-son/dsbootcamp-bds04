@@ -19,12 +19,6 @@ public class CityResource {
     @Autowired
     CityService service;
 
-    // PAGED
-    @GetMapping("/paged")
-    public ResponseEntity<Page<CityDTO>> findAllPaged(Pageable pageable){
-        Page<CityDTO> getPage = service.findAllPaged(pageable);
-        return ResponseEntity.ok().body(getPage);
-    }
 
     // LIST
     @GetMapping
@@ -32,6 +26,17 @@ public class CityResource {
         List<CityDTO> getList = service.findAllList();
         return ResponseEntity.ok().body(getList);
     }
+
+
+    // PAGED
+    @GetMapping("/paged")
+    public ResponseEntity<Page<CityDTO>> findAllPaged(Pageable pageable){
+        Page<CityDTO> getPage = service.findAllPaged(pageable);
+        return ResponseEntity.ok().body(getPage);
+    }
+
+
+
 
 
 

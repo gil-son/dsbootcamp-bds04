@@ -5,13 +5,24 @@ import java.time.LocalDate;
 
 import com.devsuperior.bds04.entities.Event;
 
+import javax.validation.constraints.Future;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 public class EventDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long id;
+
+	@NotBlank(message = "Campo requerido")
 	private String name;
+
+	@Future(message = "A data do evento não pode ser passada")
+	//@PastOrPresent(message = "The date of product  no must be future")
 	private LocalDate date;
 	private String url;
+
+	@NotNull(message = "A cidade nao pode ser nulo!")
 	private Long cityId;
 	
 	public EventDTO() {
