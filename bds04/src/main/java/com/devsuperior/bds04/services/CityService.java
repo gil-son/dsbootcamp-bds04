@@ -1,6 +1,8 @@
 package com.devsuperior.bds04.services;
 
 import com.devsuperior.bds04.dto.CityDTO;
+import com.devsuperior.bds04.dto.CityDTO;
+import com.devsuperior.bds04.entities.City;
 import com.devsuperior.bds04.entities.City;
 import com.devsuperior.bds04.repositories.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,4 +34,14 @@ public class CityService {
         Page<City> page = repository.findAll(pageable);
         return page.map(x -> new CityDTO(x));
     }
+
+
+    @Transactional
+    public CityDTO insert(CityDTO dto) {
+        City entity = new City();
+        entity.setName(dto.getName());
+        entity = repository.save(entity);
+        return new CityDTO(entity);
+    }
+    
 }
