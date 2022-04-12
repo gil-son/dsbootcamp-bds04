@@ -27,6 +27,7 @@ public class EventResource {
         return ResponseEntity.ok().body(getPage);
     }
 
+
     // LIST
     @GetMapping
     public ResponseEntity<List<EventDTO>> findAllList(){
