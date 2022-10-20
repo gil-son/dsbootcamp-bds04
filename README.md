@@ -19,17 +19,17 @@ Note: If you have questions about ResourceServerConfig authorization rules, read
 
 <ul>
 
-<li>Validações de City:
-         <ul>
-         <li>Nome não pode ser vazio</li>
-         </ul>
+<li>City validations:
+          <ul>
+          <li>Name cannot be empty</li>
+          </ul>
 </li>
-<li>Validações de Event:
-       <ul>
-       <li>Nome não pode ser vazio</li>
-       <li>Data não pode ser passada</li>
-       <li>Cidade não pode ser nula</li>
-       </ul>
+<li>Event Validations:
+        <ul>
+        <li>Name cannot be empty</li>
+        <li>Date cannot be passed</li>
+        <li>City cannot be null</li>
+        </ul>
 </li>
 </ul>
 
